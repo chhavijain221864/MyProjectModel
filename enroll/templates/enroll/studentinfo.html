@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Doc</title>
+    <style>
+        th,td{
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    {{stu}}
+    {% if stu %}
+    <h1>Show Data</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>STUDID</th>
+            <th>STUDNAME</th>
+            <th>STUDEMAIL</th>
+            <th>ADDRESS</th>
+            <th>COMMENTS</th>
+        </tr>
+     {% for s in stu %} 
+     <tr><td>{{s.id}}</td>  
+     <td>{{s.studid}}</td>  
+     <td>{{s.studname}}</td>  
+     <td>{{s.studmail}}</td>  
+     <td>{{s.studadd}}</td>  
+     <td>{{s.comment}}</td>
+     </tr>
+     {% endfor %} 
+    </table>
+    {% else %}
+    <h1>no data found</h1>
+    {% endif %} 
+</body>
+</html>
